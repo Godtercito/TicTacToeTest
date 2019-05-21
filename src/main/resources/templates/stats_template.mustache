@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+		<link rel="stylesheet" href="/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/css/style.css">
+	</head>
+	<body>
+	<div class="container-fluid" >
+		<div class="table-responsive-md">
+			<table class="table table-striped">
+				<tr>
+			      <th class="align-middle text-center" scope="col">Rank</th>
+			      <th class="align-middle text-center" scope="col">Player</th>
+			      <th class="align-middle text-center" scope="col">Wins</th>
+			      <th class="align-middle text-center" scope="col">Losses</th>
+			      <th class="align-middle text-center" scope="col">Ties</th>
+			    </tr>
+			  {{#stats}}	
+			    <tr>
+			      <td class="align-middle text-center"> {{-index}}</td>
+			      <td class="align-middle text-center"> {{player}}</td>
+			      <td class="align-middle text-center"> {{wins}}</td>
+			      <td class="align-middle text-center"> {{losses}}</td>
+			      <td class="align-middle text-center"> {{tied}}</td>   
+			    </tr>	
+			  {{/stats}}
+			</table>
+		</div> 
+      </div>
+	</body>
+</html>

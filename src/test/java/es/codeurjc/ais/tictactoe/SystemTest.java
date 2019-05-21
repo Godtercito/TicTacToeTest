@@ -28,7 +28,7 @@ public class SystemTest {
     
     @BeforeClass
     public static void setupClass() {
-        WebDriverManager.chromedriver().setup();
+        WebDriverManager.firefoxdriver().setup();
         WebApp.start();
     }
     
@@ -39,11 +39,11 @@ public class SystemTest {
     
     @Before
     public void setupTest() {
-        driver1 = new ChromeDriver();
-        driver2 = new ChromeDriver();
+        driver1 = new FirefoxDriver();
+        driver2 = new FirefoxDriver();
         
-        driver1.get("localhost:8080");
-        driver2.get("localhost:8080");
+        driver1.get("http://localhost:8080");
+        driver2.get("http://localhost:8080");
         
         driver1.findElement(By.id("nickname")).sendKeys("Jugador1");
         driver2.findElement(By.id("nickname")).sendKeys("Jugador2");
